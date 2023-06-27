@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 import { UserType } from "typings/models";
 
 enum ActivePicture {
-	ProfilePicture = "profile_picture",
+	ProfilePicture = "profile_pic",
 	Avatar = "avatar",
 }
 
