@@ -5,5 +5,17 @@
   "main": "build/index.js",
   "repository": "https://github.com/Ankan002/champ-ai-api.git",
   "author": "Exponents",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.1",
+    "morgan": "^1.10.0",
+    "winston": "^3.9.0",
+    "zod": "^3.21.4"
+  }
 }
