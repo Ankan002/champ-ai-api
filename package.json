@@ -9,7 +9,13 @@
 	"scripts": {
 		"dev": "nodemon",
 		"build": "swc src -d build",
-		"start": "node build/index.js"
+		"start": "node build/index.js",
+		"prepare": "husky install",
+		"pre-commit": "yarn lint && yarn test && yarn build",
+		"post-merge": "yarn install",
+		"commit-msg": "npx --no-install commitlint --edit",
+		"lint": "eslint",
+		"test": "jest --passWithNoTests"
 	},
 	"dependencies": {
 		"cookie-parser": "^1.4.6",
