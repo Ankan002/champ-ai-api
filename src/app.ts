@@ -5,10 +5,13 @@ import fileUpload from "express-fileupload";
 import { logger } from "utils/logger";
 import { morganConfig } from "middlewares/morgan";
 import { origins } from "constants/origins";
+import { connectToDB } from "utils/connect-to-db";
 
 export const startServer = () => {
 	const app = express();
 	const PORT = process.env["PORT"];
+
+	connectToDB();
 
 	app.use(
 		cors({
