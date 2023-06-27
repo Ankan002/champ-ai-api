@@ -1,0 +1,9 @@
+{
+  "name": "champ-ai-api",
+  "version": "0.0.1",
+  "description": "The API for Champ AI.",
+  "main": "build/index.js",
+  "repository": "https://github.com/Ankan002/champ-ai-api.git",
+  "author": "Exponents",
+  "license": "MIT"
+}
