@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 import { logger } from "utils/logger";
+import { morganConfig } from "middlewares/morgan";
 
 export const startServer = () => {
 	const app = express();
@@ -19,6 +20,8 @@ export const startServer = () => {
 			},
 		})
 	);
+
+	app.use(morganConfig);
 
 	app.use("/", (req, res) => {
 		return res.status(200).json({
