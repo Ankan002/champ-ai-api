@@ -1,12 +1,12 @@
 import { Schema, model } from "mongoose";
-import { UserType } from "typings/models";
+import { UserSchema } from "typings/models";
 
 enum ActivePicture {
 	ProfilePicture = "profile_pic",
 	Avatar = "avatar",
 }
 
-const userSchema = new Schema<UserType>(
+const userSchema = new Schema<UserSchema>(
 	{
 		email: {
 			type: String,
@@ -76,4 +76,4 @@ const userSchema = new Schema<UserType>(
 	}
 );
 
-export const User = model<UserType>("User", userSchema);
+export const User = model<UserSchema>("User", userSchema);

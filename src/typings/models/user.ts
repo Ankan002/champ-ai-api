@@ -1,6 +1,6 @@
 import { ObjectId } from "mongoose";
 
-export interface UserType {
+export interface UserSchema {
 	_id: ObjectId;
 	email: string;
 	username: string;
