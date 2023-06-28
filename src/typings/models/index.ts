@@ -4,3 +4,4 @@ export * from "./prompt";
 export * from "./starred-discussion-context";
 export * from "./discussion-context-analytics";
 export * from "./plan";
+export * from "./plan-purchase-history";
