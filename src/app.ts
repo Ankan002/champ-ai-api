@@ -6,6 +6,7 @@ import { logger } from "utils/logger";
 import { morganConfig } from "middlewares/morgan";
 import { origins } from "constants/origins";
 import { connectToDB } from "utils/connect-to-db";
+import { authRouter } from "routes/auth-router";
 
 export const startServer = () => {
 	const app = express();
@@ -32,12 +33,14 @@ export const startServer = () => {
 
 	app.use(morganConfig);
 
-	app.use("/", (req, res) => {
+	app.get("/", (req, res) => {
 		return res.status(200).json({
 			success: true,
 			message: "Hello from Champ AI!!",
 		});
 	});
+
+	app.use("/api/auth", authRouter);
 
 	app.listen(PORT, () => logger.info(`App is running at port: ${PORT}`));
 };
