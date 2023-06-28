@@ -7,7 +7,7 @@ export interface PlanPurchaseHistorySchema {
 	start_date: string;
 	end_date: string;
 	order_id: string;
-	payment_id?: string;
+	payment_id: string | null;
 	is_amount_paid: boolean;
 	id: string;
 	createdAt: string;
