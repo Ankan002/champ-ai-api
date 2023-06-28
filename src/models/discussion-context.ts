@@ -44,4 +44,4 @@ const discussionContextSchema = new Schema<DiscussionContextSchema>(
 	}
 );
 
-export const discussionContext = model<DiscussionContextSchema>("DiscussionContext", discussionContextSchema);
+export const DiscussionContext = model<DiscussionContextSchema>("DiscussionContext", discussionContextSchema);

@@ -8,8 +8,8 @@ export interface UserSchema {
 	provider_id: string;
 	profile_pic: string;
 	avatar: string;
-	premium_till: string;
-	premium_plan: ObjectId;
+	premium_till: string | null;
+	premium_plan: ObjectId | null;
 	is_active: boolean;
 	active_picture: "profile_pic" | "avatar";
 	id: string;

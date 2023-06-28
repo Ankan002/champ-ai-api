@@ -5,7 +5,7 @@ export interface DiscussionContextSchema {
 	user: ObjectId;
 	name: string;
 	type: "question" | "user_text";
-	question?: string;
+	question: string | null;
 	context_text: string;
 	id: string;
 	createdAt: string;
