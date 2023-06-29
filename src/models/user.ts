@@ -12,7 +12,6 @@ const userSchema = new Schema<UserSchema>(
 			type: String,
 			required: true,
 			min: 1,
-			max: 60,
 			trim: true,
 			unique: true,
 		},
