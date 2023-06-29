@@ -22,6 +22,8 @@ export const isAuthenticated = (req: Request, res: Response, next: NextFunction)
 	try {
 		const payloadData = jwtVerify(accessToken, process.env["SECRET"] ?? "") as AuthJwtPayLoad;
 
+		console.log(payloadData.user);
+
 		if (!payloadData.user) {
 			res.clearCookie("access-token");
 
